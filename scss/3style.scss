@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Kavivanar');
+
 // styling so that the grid-container fit the window screen
 * {
   margin: 0;
@@ -34,6 +36,7 @@
   padding-top: 10px;
   font-size: 30px;
   font-style: normal;
+  font-family: 'Kavivanar', cursive;
   color: #a47a07;
 }
 
@@ -92,6 +95,33 @@
   text-align: center;
 }
 
+input[type=submit]{
+border-radius:10px;
+}
+
+input[type=submit]:hover{
+  background-color: grey;
+  box-shadow: 3px 3px 5px 6px red;
+}
+
+textarea{
+  background-color: #c08888;
+  box-shadow: 3px 3px 5px 6px #5d4b5a;
+}
+textarea:hover{
+  box-shadow: 3px 3px 5px 6px black;
+}
+
+input[type=text]{
+  background-color: #c08888;
+  box-shadow: 3px 3px 5px 6px #5d4b5a;
+}
+
+input[type=text]:hover{
+  box-shadow: 3px 3px 5px 6px black;
+
+}
+
 // styling for the footer containing the icons and homepage link
 footer{
   grid-column-start: 1;
@@ -147,8 +177,22 @@ a{
   and (-webkit-min-device-pixel-ratio: 2) {
     .grid-container{
       background-image: url(../images/form2.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width:100%;
+      grid-column-end: 10;
     }
+
+    .header{
+      grid-column-end: 10;
+    }
+
+    footer{
+    grid-row-start: 11;
+    grid-row-end:16;
+    grid-column-end:10;
   }
+}
 
 /* tablet */
 @media only screen

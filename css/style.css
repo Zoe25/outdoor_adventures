@@ -185,7 +185,22 @@ td {
 /* mobile */
 @media only screen and (min-device-width: 1px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .box1 {
-    background-image: url(../images/background-homepage2.jpeg); } }
+    background-image: url(../images/background-homepage2.jpeg); }
+
+  .item {
+    grid-column-end: 7; }
+
+  .box3 {
+    grid-column-end: 1; }
+
+  .box4 {
+    grid-column-end: 2; }
+
+  .box5 {
+    grid-column-end: 3; }
+
+  .box6 {
+    grid-column-end: 4; } }
 /* tablet */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
   .box1 {
