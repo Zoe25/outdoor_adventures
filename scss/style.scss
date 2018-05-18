@@ -1,3 +1,5 @@
+$backgroundColor:#000000;
+
 // styling so that the grid-container fit the window screen
 * {
   margin: 0;
@@ -11,7 +13,7 @@
   padding: 10px;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: 100px;
-  background-color: black;
+  background-color: $background-color;
 }
 
 .item{
@@ -33,7 +35,7 @@
 
 // styling for the heading
 h1{
-  background-color:black;
+  background-color:$backgroundColor;
   border-radius: 50px;
 }
 
@@ -43,7 +45,7 @@ h1{
   grid-column-end: 7;
   grid-row-start:6;
   grid-row-end: 10;
-  background-color: black;
+  background-color: $backgroundColor;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-auto-rows:20px;
