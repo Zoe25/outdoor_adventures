@@ -1,0 +1,187 @@
+// styling so that the grid-container fit the window screen
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container{
+  display: grid;
+   // grid-gap: 20px;
+  padding: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 100px;
+  background-color: black;
+}
+
+.first-paragraph{
+  grid-column-start: 1;
+  grid-column-end:7;
+  grid-row-start: 1;
+  grid-row-end:3;
+  text-align: center;
+  padding:20px 100px 0;
+  background-image: url(../images/gallery-header.jpeg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 50px;
+  color: white;
+
+// heading is the colour black
+h1{
+    color: black;
+}
+}
+
+// -------------------------------------------------------------------------------
+// styling for all the gallery catergories
+.gallery1{
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  background-color: green;
+  display: inline-block;
+}
+
+.gallery2{
+  grid-column-start: 1;
+  grid-column-end:7;
+  grid-row-start: 6;
+  grid-row-end:9;
+  background-color: red;
+}
+
+.gallery3{
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 9;
+  grid-row-end:12;
+  background-color: blue;
+}
+
+.gallery4{
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 12;
+  grid-row-end:15;
+  background-color: violet;
+}
+
+// styling all of the gallery background and color
+.item{
+  text-align: center;
+  background-color: black;
+  color: #a47a07;
+  font-size: 25px;
+}
+
+.homepage{
+  grid-column-start:1;
+  grid-column-end:7;
+  text-decoration: none;
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: 10px;
+  // background-color: #a47a07;
+
+// styling the Homepage link
+a{
+  text-decoration: none;
+  color: #a47a07;
+  grid-column-start: 2;
+  grid-column-end:4;
+}
+
+// styling to place the icons along the same line as the homepage link
+.facebook-icon, .twitter-icon, a{
+  grid-row-start:5;
+  grid-row-end:6;
+}
+
+.facebook-icon{
+  grid-column-start:2;
+}
+
+.twitter-icon{
+  grid-column-start: 4;
+}
+}
+
+// ------------------------------------------------------------------------------
+// responsive code
+
+/* mobile */
+@media only screen
+  and (min-device-width: 1px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .grid-container, .item{
+      background: white;
+    }
+
+    .first-paragraph{
+      font-size: 10px;
+      grid-row-end:10;
+
+      h1{
+        color: orange;
+      }
+    }
+
+// resizing the images of the gallery so that it does not overlap
+    img{
+      width: 90px;
+      height: 90px;
+    }
+
+// resizingthe grid-rows so that there are enough space for all the images
+    .gallery1{
+        grid-row-end: 11;
+    }
+
+    .gallery2{
+      grid-row-end:14;
+    }
+
+    .gallery3{
+      grid-row-end:17;
+    }
+
+    .gallery4{
+      grid-row-end:19;
+    }
+
+    .homepage{
+      font-size: 10px;
+
+      .facebook-icon{
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+  }
+
+/* tablet */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .grid-container{
+      background: #a47a07;
+    }
+  }
+
+/* large desktop screen */
+@media only screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1440px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .grid-container{
+      background: orange;
+    }
+  }
